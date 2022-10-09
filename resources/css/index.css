@@ -1,0 +1,43 @@
+table {
+    border: 1px solid  #0099cc;
+    margin-bottom: 1em;
+    padding: 12px;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+}
+
+/* границы ячеек первого ряда таблицы */
+th {
+    border: 1px solid  #0099cc;
+    padding: 12px;
+}
+/* границы ячеек тела таблицы */
+td {
+    border: 1px solid  #0099cc;
+    padding: 10px;
+}
+
+.table button{
+    width: 7em;
+    height: 3em;
+
+}
+
+.table{
+    text-align: center;
+}
+
+.see_more{
+    background-color: lightblue;
+}
+
+.edit{
+    background-color: lightgreen;
+}
+
+.delete{
+    background-color: lightcoral;
+}

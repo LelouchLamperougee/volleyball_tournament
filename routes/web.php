@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Routes for Homepage
+Route::get('/', [\App\Http\Controllers\HomepageController::class, 'homepage'])->name('homepage.homepage');
+
+//Routes for School
+
+Route::get('/schools', [\App\Http\Controllers\SchoolController::class, 'index'])->name('schools.index');
+
+//Routes for Student
+
+Route::get('/students', [\App\Http\Controllers\StudentController::class, 'index'])->name('students.index');
+
+//Routes for Team
+
+Route::get('/teams', [\App\Http\Controllers\TeamController::class, 'index'])->name('teams.index');
