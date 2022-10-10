@@ -1,0 +1,19 @@
+.navigation{
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation .button-section{
+    display: flex;
+    justify-content: space-around;
+}
+
+#button-description{
+    margin-bottom: 1.8em;
+}
+
+#description{
+    margin-bottom: 3em;
+    font-size: 28px;
+
+}

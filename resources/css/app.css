@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+
+.container{
+    display: flex;
+    margin-top: 7em;
+}
+
+.content{
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding: 3em;
+    margin: 0 auto;
+    min-width: 70em;
+    max-width: 85em;
+    min-height: 40em;
+    max-height: 50em;
+    border: 2px solid black;
+}
+
+.title{
+    font-size: 72px;
+    color: #0099cc;
+    margin-bottom: 0.5em;
+}
+
+.button{
+    width: 8em;
+    height: 3.2em;
+    font-size: 21px;
+    border-radius: 10px;
+    background-color: lightseagreen;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+p{
+    font-size: 30px;
+}
