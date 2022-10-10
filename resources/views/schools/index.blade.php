@@ -22,7 +22,7 @@
                             <td>{{$school->id}}</td>
                             <td>{{$school->school_name}}</td>
                             <td><button class="see_more"><a class="a_text" href="{{route('schools.show', $school->id)}}">view</a></button></td>
-                            <td><button class="edit">edit</button></td>
+                            <td><button class="edit"><a class="a_text" href="{{route('schools.edit', $school->id)}}">edit</a></button></td>
                             <td><button class="delete">delete</button></td>
                         </tr>
                     @endforeach

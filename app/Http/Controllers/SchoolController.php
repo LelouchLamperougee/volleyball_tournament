@@ -33,4 +33,19 @@ class SchoolController extends Controller
 
         return view('schools.show', compact('school'));
     }
+
+    public function edit(School $school){
+        return view('schools.edit', compact('school'));
+    }
+
+    public function update(School $school){
+
+        $data = request()->validate([
+            'school_name' => 'string',
+        ]);
+
+        $school->update($data);
+
+        return redirect()->route('schools.index');
+    }
 }
