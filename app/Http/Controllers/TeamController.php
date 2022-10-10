@@ -46,4 +46,23 @@ class TeamController extends Controller
 
         return view('teams.members', compact('members'));
     }
+
+    public function edit(Team $team){
+
+        $schools = School::all();
+
+        return view('teams.edit', compact('team', 'schools'));
+    }
+
+    public function update(Team $team){
+
+        $data = request()->validate([
+            'team_name' => '',
+            'school_id' => '',
+        ]);
+
+        $team->update($data);
+
+        return redirect()->route('teams.index');
+    }
 }

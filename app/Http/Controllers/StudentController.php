@@ -8,21 +8,24 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-    public function index(){
+    public function index()
+    {
 
         $students = Student::all();
 
         return view('students.index', compact('students'));
     }
 
-    public function create(){
+    public function create()
+    {
 
         $teams = Team::all();
 
         return view('students.create', compact('teams'));
     }
 
-    public function store(){
+    public function store()
+    {
 
         $data = request()->validate([
             'first_name' => 'string',
@@ -36,9 +39,29 @@ class StudentController extends Controller
         return redirect()->route('students.index');
     }
 
-    public function show(Student $student){
+    public function show(Student $student)
+    {
 
         return view('students.show', compact('student'));
 
+    }
+
+    public function edit(Student $student)
+    {
+        $teams = Team::all();
+        return view('students.edit', compact('student', 'teams'));
+    }
+
+    public function update(Student $student)
+    {
+        $data = request()->validate([
+            'first_name' => 'string',
+            'last_name' => 'string',
+            'age' => 'integer',
+            'team_id' => '',
+        ]);
+
+        $student->update($data);
+        return redirect()->route('students.index');
     }
 }
