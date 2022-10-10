@@ -13,4 +13,19 @@ class SchoolController extends Controller
 
         return view('schools.index', compact('schools'));
     }
+
+    public function create(){
+        return view('schools.create');
+    }
+
+    public function store(){
+
+        $data = request()->validate([
+            'school_name' => 'string',
+        ]);
+
+        School::create($data);
+
+        return redirect()->route('schools.index');
+    }
 }

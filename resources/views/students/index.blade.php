@@ -38,7 +38,8 @@
             </div>
 
             <div class="button-section">
-
+                <button class="button"><a href="{{route('students.create')}}">Add a tournament participant</a></button>
+                <button class="button"><a href="{{route('teams.index')}}">Back</a></button>
             </div>
         </div>
     </div>

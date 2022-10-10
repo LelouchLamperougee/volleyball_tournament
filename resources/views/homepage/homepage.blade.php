@@ -15,7 +15,7 @@
             </div>
 
             <div class="navigation">
-                <p>Is the school already registered for the tournament?</p><hr>
+                <h3 class="question">Is the school already registered for the tournament?</h3><hr>
                 <div class="button-section">
                     <button class="button"><a href="{{route('teams.index')}}">Yes, registered</a></button>
                     <button class="button"><a href="{{route('schools.index')}}">Register</a></button>

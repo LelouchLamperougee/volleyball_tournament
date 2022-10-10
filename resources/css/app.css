@@ -9,7 +9,7 @@
 
 .container{
     display: flex;
-    margin-top: 7em;
+    margin-top: 3.5em;
 }
 
 .content{
@@ -18,10 +18,10 @@
     align-content: center;
     padding: 3em;
     margin: 0 auto;
-    min-width: 70em;
+    min-width: 75em;
     max-width: 85em;
     min-height: 40em;
-    max-height: 50em;
+    max-height: 55em;
     border: 2px solid black;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .button{
-    width: 8em;
+    min-width: 8em;
     height: 3.2em;
     font-size: 21px;
     border-radius: 10px;

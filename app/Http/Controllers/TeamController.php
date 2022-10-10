@@ -14,4 +14,24 @@ class TeamController extends Controller
 
         return view('teams.index', compact('teams'));
     }
+
+    public function create(){
+
+        $schools = School::all();
+
+        return view('teams.create', compact('schools'));
+    }
+
+    public function store(){
+
+        $data = request()->validate([
+            'team_name' => '',
+            'school_id' => '',
+        ]);
+
+        Team::create($data);
+
+        return redirect()->route('teams.index');
+    }
+
 }

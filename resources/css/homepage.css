@@ -15,5 +15,9 @@
 #description{
     margin-bottom: 3em;
     font-size: 28px;
+}
 
+.question{
+    color: #ef2121;
+    font-size: 32px;
 }
