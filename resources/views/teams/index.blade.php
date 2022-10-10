@@ -28,7 +28,7 @@
                                 <button class="see_more"><a class="a_text" href="{{route('teams.show', $team->id)}}">view</a></button>
                             </td>
                             <td>
-                                <button class="edit">edit</button>
+                                <button class="edit"><a class="a_text" href="{{route('teams.edit', $team->id)}}">edit</a></button>
                             </td>
                             <td>
                                 <button class="delete">delete</button>
