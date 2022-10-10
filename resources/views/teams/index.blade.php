@@ -42,7 +42,8 @@
             </div>
 
             <div class="button-section">
-
+                <button class="button"><a href="{{route('teams.create')}}">Register a team</a></button>
+                <button class="button"><a href="{{route('homepage.homepage')}}">Back</a></button>
             </div>
         </div>
     </div>

@@ -32,7 +32,8 @@
             </div>
 
             <div class="button-section">
-
+                <button class="button"><a href="{{route('schools.create')}}">Register a new school</a></button>
+                <button class="button"><a href="{{route('homepage.homepage')}}">Back</a></button>
             </div>
         </div>
     </div>
