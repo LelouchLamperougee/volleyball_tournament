@@ -18,10 +18,10 @@
     align-content: center;
     padding: 3em;
     margin: 0 auto;
-    min-width: 75em;
-    max-width: 85em;
+    min-width: 85em;
+    max-width: 95em;
     min-height: 40em;
-    max-height: 55em;
+    /*max-height: 55em;*/
     border: 2px solid black;
 }
 
@@ -43,6 +43,11 @@
 a{
     text-decoration: none;
     color: white;
+}
+
+.a_text{
+    font-size: 21px;
+    color: black;
 }
 
 p{

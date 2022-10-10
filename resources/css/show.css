@@ -1,0 +1,25 @@
+table {
+    border: 1px solid  #0099cc;
+    margin-bottom: 1em;
+    padding: 12px;
+}
+
+.list{
+    display: flex;
+    justify-content: center;
+}
+
+/* границы ячеек первого ряда таблицы */
+th {
+    border: 1px solid  #0099cc;
+    padding: 12px;
+    font-size: 21px;
+}
+/* границы ячеек тела таблицы */
+td {
+    border: 1px solid  #0099cc;
+    padding: 10px;
+    font-size: 21px;
+}
+
+

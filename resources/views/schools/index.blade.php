@@ -14,16 +14,14 @@
                     <tr>
                         <th>school id</th>
                         <th>school name</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th colspan="3">operations</th>
                     </tr>
 
                     @foreach($schools as $school)
                         <tr>
                             <td>{{$school->id}}</td>
                             <td>{{$school->school_name}}</td>
-                            <td><button class="see_more">view</button></td>
+                            <td><button class="see_more"><a class="a_text" href="{{route('schools.show', $school->id)}}">view</a></button></td>
                             <td><button class="edit">edit</button></td>
                             <td><button class="delete">delete</button></td>
                         </tr>

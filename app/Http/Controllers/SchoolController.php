@@ -28,4 +28,9 @@ class SchoolController extends Controller
 
         return redirect()->route('schools.index');
     }
+
+    public function show(School $school){
+
+        return view('schools.show', compact('school'));
+    }
 }

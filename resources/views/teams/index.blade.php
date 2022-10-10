@@ -15,9 +15,7 @@
                         <th>team id</th>
                         <th>team name</th>
                         <th>school</th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
+                        <th colspan="3">operations</th>
                     </tr>
 
 
@@ -27,7 +25,7 @@
                             <td>{{$team->team_name}}</td>
                             <td>{{$team->school->school_name}}</td>
                             <td>
-                                <button class="see_more">view</button>
+                                <button class="see_more"><a class="a_text" href="{{route('teams.show', $team->id)}}">view</a></button>
                             </td>
                             <td>
                                 <button class="edit">edit</button>
@@ -43,6 +41,7 @@
 
             <div class="button-section">
                 <button class="button"><a href="{{route('teams.create')}}">Register a team</a></button>
+                <button class="button"><a href="{{route('students.index')}}">All participants</a></button>
                 <button class="button"><a href="{{route('homepage.homepage')}}">Back</a></button>
             </div>
         </div>
