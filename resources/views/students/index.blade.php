@@ -27,9 +27,23 @@
                             <td>{{$student->last_name}}</td>
                             <td>{{$student->age}}</td>
                             <td>{{$student->team->team_name}}</td>
-                            <td ><button class="see_more"><a class="a_text" href="{{route('students.show', $student->id)}}">view</a></button></td>
-                            <td><button class="edit"><a class="a_text" href="{{route('students.edit', $student->id)}}">edit</a></button></td>
-                            <td><button class="delete">delete</button></td>
+                            <td>
+                                <button class="see_more"><a class="a_text"
+                                                            href="{{route('students.show', $student->id)}}">view</a>
+                                </button>
+                            </td>
+                            <td>
+                                <button class="edit"><a class="a_text" href="{{route('students.edit', $student->id)}}">edit</a>
+                                </button>
+                            </td>
+                            <td>
+                                <form method="POST" action="{{route('students.destroy', $student->id)}}">
+                                    @method('delete')
+                                    @csrf
+                                    <button class="delete" type="submit"><a class="a_text">delete</a></button>
+                                </form>
+                            </td>
+
                         </tr>
                     @endforeach
                 </table>
