@@ -23,7 +23,13 @@
                             <td>{{$school->school_name}}</td>
                             <td><button class="see_more"><a class="a_text" href="{{route('schools.show', $school->id)}}">view</a></button></td>
                             <td><button class="edit"><a class="a_text" href="{{route('schools.edit', $school->id)}}">edit</a></button></td>
-                            <td><button class="delete">delete</button></td>
+                            <td>
+                                <form method="POST" action="{{route('schools.destroy', $school->id)}}">
+                                    @method('delete')
+                                    @csrf
+                                    <button class="delete" type="submit"><a class="a_text">delete</a></button>
+                                </form>
+                            </td>
                         </tr>
                     @endforeach
                 </table>
