@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('age');
             $table->unsignedBigInteger('team_id');
             $table->index('team_id', 'student_team_idx');
-            $table->foreign('team_id', 'student_team_fk')->on('teams')->references('id');
+            $table->foreign('team_id', 'student_team_fk')->on('teams')->references('id') ->onDelete('cascade');
 
             $table->timestamps();
         });

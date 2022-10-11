@@ -31,7 +31,11 @@
                                 <button class="edit"><a class="a_text" href="{{route('teams.edit', $team->id)}}">edit</a></button>
                             </td>
                             <td>
-                                <button class="delete">delete</button>
+                                <form method="POST" action="{{route('teams.destroy', $team->id)}}">
+                                    @method('delete')
+                                    @csrf
+                                    <button class="delete" type="submit"><a class="a_text">delete</a></button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach

@@ -4,7 +4,7 @@
     <div class="container">
         <div class="content">
             <div class="title">
-                {{$student->first_name}}.{{$student->last_name}}
+                {{$student->first_name}} {{$student->last_name}}
             </div>
 
             <div class="list">

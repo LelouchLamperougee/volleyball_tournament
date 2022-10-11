@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\School;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 class SchoolController extends Controller
@@ -45,6 +46,13 @@ class SchoolController extends Controller
         ]);
 
         $school->update($data);
+
+        return redirect()->route('schools.index');
+    }
+
+    public function destroy(School $school){
+
+        $school->delete();
 
         return redirect()->route('schools.index');
     }
