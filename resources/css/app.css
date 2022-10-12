@@ -57,3 +57,8 @@ a{
 p{
     font-size: 30px;
 }
+
+.paginate{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
