@@ -7,19 +7,24 @@
                 School Update
             </div>
 
-            <form method="POST" action="{{route('schools.update', $school->id)}}" >
+            <form method="POST" action="{{route('schools.update', $school->id)}}">
                 @method('PATCH')
                 @csrf
                 <div class="input-section">
 
                     <div>
                         <label for="school_name">Enter school name:<br></label>
-                        <input type="text" name="school_name" value="{{$school->school_name}}" >
+                        <input type="text" name="school_name" value="{{$school->school_name}}">
+
+                        @error('school_name')
+                        <p class="error">{{$message}}</p>
+                        @enderror
                     </div>
+
 
                     <div class="button-section">
                         <button class="button" type="submit"><a>Update</a></button>
-                        <button class="button"><a href="{{route('schools.index')}}">Back</a> </button>
+                        <button class="button"><a href="{{route('schools.index')}}">Back</a></button>
                     </div>
 
                 </div>
