@@ -42,8 +42,7 @@ Route::get('/teams', [\App\Http\Controllers\TeamController::class, 'index'])->na
 Route::get('/teams/create', [\App\Http\Controllers\TeamController::class, 'create'])->name('teams.create');
 Route::post('/teams', [\App\Http\Controllers\TeamController::class, 'store'])->name('teams.store');
 Route::get('/teams/{team}', [\App\Http\Controllers\TeamController::class, 'show'])->name('teams.show');
-Route::get('/teams/{team}/members', [\App\Http\Controllers\TeamController::class, 'showMembers'])->name('teams.show
-.members');
+Route::get('/teams/{team}/members', [\App\Http\Controllers\TeamController::class, 'showMembers'])->name('teams.show.members');
 Route::get('/teams/{team}/edit', [\App\Http\Controllers\TeamController::class, 'edit'])->name('teams.edit');
 Route::patch('/teams/{team}', [\App\Http\Controllers\TeamController::class, 'update'])->name('teams.update');
 Route::delete('/teams/{team}', [\App\Http\Controllers\TeamController::class, 'destroy'])->name('teams.destroy');

@@ -29,8 +29,17 @@
                             <td>{{$member->team->team_name}}</td>
                             <td>{{$member->created_at}}</td>
                             <td ><button class="see_more"><a class="a_text" href="{{route('students.show', $member->id)}}">view</a></button></td>
-                            <td><button class="edit">edit</button></td>
-                            <td><button class="delete">delete</button></td>
+                            <td>
+                                <button class="edit"><a class="a_text" href="{{route('students.edit', $member->id)}}">edit</a>
+                                </button>
+                            </td>
+                            <td>
+                                <form method="POST" action="{{route('students.destroy', $member->id)}}">
+                                    @method('delete')
+                                    @csrf
+                                    <button class="delete" type="submit"><a class="a_text">delete</a></button>
+                                </form>
+                            </td>
                         </tr>
                 </table>
             </div>

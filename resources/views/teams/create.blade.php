@@ -13,7 +13,13 @@
                     <div class="inputs">
                         <div>
                             <label for="team_name">Enter team name:<br></label>
-                            <input type="text" name="team_name" placeholder="team">
+                            <input
+                                value="{{old('team_name')}}"
+                                type="text" name="team_name" placeholder="team">
+
+                            @error('team_name')
+                            <p class="error">{{$message}}</p>
+                            @enderror
                         </div>
 
                         <div>

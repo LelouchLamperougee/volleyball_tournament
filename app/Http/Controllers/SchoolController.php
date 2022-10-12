@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SchoolRequest;
 use App\Models\School;
 use App\Models\Team;
 use Illuminate\Http\Request;
@@ -19,14 +20,10 @@ class SchoolController extends Controller
         return view('schools.create');
     }
 
-    public function store(){
+    public function store(SchoolRequest $request){
 
-        $data = request()->validate([
-            'school_name' => 'string',
-        ]);
-
+        $data = $request->validated();
         School::create($data);
-
         return redirect()->route('schools.index');
     }
 
@@ -39,11 +36,9 @@ class SchoolController extends Controller
         return view('schools.edit', compact('school'));
     }
 
-    public function update(School $school){
+    public function update(SchoolRequest $request, School $school){
 
-        $data = request()->validate([
-            'school_name' => 'string',
-        ]);
+        $data = $request->validated();
 
         $school->update($data);
 

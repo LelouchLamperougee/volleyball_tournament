@@ -13,7 +13,13 @@
 
                     <div>
                         <label for="school_name">Enter school name:<br></label>
-                        <input type="text" name="school_name" placeholder="school">
+                        <input
+                            value="{{old('school_name')}}"
+                            type="text" name="school_name" placeholder="school">
+
+                        @error('school_name')
+                        <p class="error">{{$message}}</p>
+                        @enderror
                     </div>
 
                     <div class="button-section">

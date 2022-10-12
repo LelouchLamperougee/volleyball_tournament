@@ -14,17 +14,35 @@
 
                         <div>
                             <label for="first_name">Enter first name:<br></label>
-                            <input type="text" name="first_name" placeholder="first name">
+                            <input
+                                value="{{old('first_name')}}"
+                                type="text" name="first_name" placeholder="first name">
+
+                            @error('first_name')
+                            <p class="error">{{$message}}</p>
+                            @enderror
                         </div>
 
                         <div>
                             <label for="last_name">Enter last name:<br></label>
-                            <input type="text" name="last_name" placeholder="last name">
+                            <input
+                                value="{{old('last_name')}}"
+                                type="text" name="last_name" placeholder="last name">
+
+                            @error('last_name')
+                            <p class="error">{{$message}}</p>
+                            @enderror
                         </div>
 
                         <div>
                             <label for="age">Enter age:<br></label>
-                            <input type="number" name="age" placeholder="age">
+                            <input
+                                value="{{old('age')}}"
+                                type="number" name="age" placeholder="age">
+
+                            @error('age')
+                            <p class="error">{{$message}}</p>
+                            @enderror
                         </div>
 
                         <div>
@@ -36,6 +54,10 @@
                                     </option>
                                 @endforeach
                             </select>
+
+                            @error('team_id')
+                            <p class="error">{{$message}}</p>
+                            @enderror
                         </div>
 
                     </div>
