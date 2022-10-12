@@ -15,6 +15,10 @@
                         <div>
                             <label for="team_name">Enter team name:<br></label>
                             <input type="text" name="team_name" value="{{$team->team_name}}" placeholder="team">
+
+                            @error('last_name')
+                            <p class="error">{{$message}}</p>
+                            @enderror
                         </div>
 
                         <div>

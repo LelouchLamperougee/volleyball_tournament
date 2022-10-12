@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TeamRequest;
 use App\Models\School;
 use App\Models\Student;
 use App\Models\Team;
@@ -23,12 +24,9 @@ class TeamController extends Controller
         return view('teams.create', compact('schools'));
     }
 
-    public function store(){
+    public function store(TeamRequest $request){
 
-        $data = request()->validate([
-            'team_name' => '',
-            'school_id' => '',
-        ]);
+        $data = $request->validated();
 
         Team::create($data);
 
@@ -54,12 +52,9 @@ class TeamController extends Controller
         return view('teams.edit', compact('team', 'schools'));
     }
 
-    public function update(Team $team){
+    public function update(TeamRequest $request, Team $team){
 
-        $data = request()->validate([
-            'team_name' => '',
-            'school_id' => '',
-        ]);
+        $data = $request->validated();
 
         $team->update($data);
 

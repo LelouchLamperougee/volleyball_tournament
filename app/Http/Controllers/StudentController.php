@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StudentRequest;
 use App\Models\Student;
 use App\Models\Team;
 use Illuminate\Http\Request;
@@ -24,15 +25,10 @@ class StudentController extends Controller
         return view('students.create', compact('teams'));
     }
 
-    public function store()
+    public function store(StudentRequest $request)
     {
 
-        $data = request()->validate([
-            'first_name' => 'string',
-            'last_name' => 'string',
-            'age' => 'integer',
-            'team_id' => '',
-        ]);
+        $data = $request->validated();
 
         Student::create($data);
 
@@ -52,15 +48,9 @@ class StudentController extends Controller
         return view('students.edit', compact('student', 'teams'));
     }
 
-    public function update(Student $student)
+    public function update(StudentRequest $request,Student $student)
     {
-        $data = request()->validate([
-            'first_name' => 'string',
-            'last_name' => 'string',
-            'age' => 'integer',
-            'team_id' => '',
-        ]);
-
+        $data = $request->validated();
         $student->update($data);
         return redirect()->route('students.index');
     }
