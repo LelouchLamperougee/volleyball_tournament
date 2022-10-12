@@ -43,6 +43,10 @@
                 </table>
             </div>
 
+            <div class="paginate">
+                {{$teams->links()}}
+            </div>
+
             <div class="button-section">
                 <button class="button"><a href="{{route('teams.create')}}">Register a team</a></button>
                 <button class="button"><a href="{{route('students.index')}}">All participants</a></button>
